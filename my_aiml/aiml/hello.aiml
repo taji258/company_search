@@ -1,0 +1,45 @@
+<!-- basic_chat.aiml -->
+<aiml version = "1.0.1" encoding = "UTF-8">
+    <category>
+        <pattern>こんにちは</pattern>
+        <template>
+            <condition name="name">
+                <li value="">お名前を教えて下さい</li>
+                <li><get name="name"/>さんこんにちは</li>
+            </condition>
+        </template>
+    </category>
+    <category>
+        <pattern>* こんにちは</pattern>
+        <template>
+            <srai>こんにちは</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>こんにちは *</pattern>
+        <template>
+            <srai>こんにちは</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>* こんにちは *</pattern>
+        <template>
+            <srai>こんにちは</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* です</pattern>
+        <that>お名前を教えて下さい</that>
+        <template>
+            <set name="name"><star index="1"/></set>さん、よろしくお願いします
+        </template>
+    </category>
+
+    <category>
+        <pattern>私 の 名前 は 何 です か</pattern>
+        <template>
+            <get name="name"/>さんです
+        </template>
+    </category>
+</aiml>

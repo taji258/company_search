@@ -1,0 +1,12 @@
+<aiml version = "1.0.1" encoding = "UTF-8">
+    <category>
+        <pattern>aaaaa</pattern>
+        <that>勤務地の希望はありますか</that>
+        <template>
+            <think>
+                <system>python data_write.py areaid 東京</system>
+            </think>   
+        </template>
+    </category>
+   
+</aiml>

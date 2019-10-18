@@ -1,0 +1,18 @@
+<aiml version = "1.0.1" encoding = "UTF-8">
+   <topic name="TOPICSID">
+   <category>
+      <pattern>*</pattern>
+      <that>その他何か希望があれば言ってください</that>
+      <template>
+         <think>
+            <set name="topicsid"><star index="1"/></set>
+            <system>python data_write.py topicsid <star index="1"/></system>
+            <set name="topic">SEARCH</set>
+         </think>
+            こちらでよろしいですか？よろしければ「検索」と言ってください
+            職種：<get name="occupation"/>、勤務地：<get name="areaid"/>、年収：<get name="annualsalary"/>、
+            業種：<get name="industry"/>、会社のタイプ：<get name="companytype"/>、働き方のタイプ：<get name="worktype"/>、その他特徴：<get name="topicsid"/>
+      </template>
+   </category>
+   </topic>
+</aiml>

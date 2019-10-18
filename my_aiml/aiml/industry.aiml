@@ -1,0 +1,16 @@
+<aiml version = "1.0.1" encoding = "UTF-8">
+   <topic name="INDUSTRY">
+   <category>
+      <pattern>*</pattern>
+      <that>業種の希望はありますか</that>
+      <template>
+         <think>
+            <set name="industry"><star index="1"/></set>
+            <system>python data_write.py industry <star index="1"/></system>
+            <set name="topic">COMPANYTYPE</set>
+         </think>
+         選んでください「成長・ベンチャー企業型」「こだわらない」「安定・優良企業型」
+      </template>
+   </category>
+   </topic>
+</aiml>

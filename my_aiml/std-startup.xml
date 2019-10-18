@@ -1,0 +1,25 @@
+<!-- std-startup.xml -->
+<aiml version="1.0.1" encoding="UTF-8">
+    <category>
+        <!-- ユーザの入力とのマッチを定義 -->
+        <!-- "LOAD AIML B"という入力にマッチ -->
+        <pattern>LOAD AIML B</pattern>
+
+        <!-- 対話テンプレートを定義 -->
+        <!-- aimlファイルを指定 -->
+        <template>
+            <learn>aiml/basic_chat.aiml</learn>
+            <learn>aiml/hello.aiml</learn>
+            <learn>aiml/begin.aiml</learn>
+            <learn>aiml/occupation.aiml</learn>
+            <learn>aiml/areaid.aiml</learn>
+            <learn>aiml/annualsalary.aiml</learn>
+            <learn>aiml/educationalstatus.aiml</learn>
+            <learn>aiml/industry.aiml</learn>
+            <learn>aiml/companytype.aiml</learn>
+            <learn>aiml/worktype.aiml</learn>
+            <learn>aiml/topicsid.aiml</learn>
+            <learn>aiml/search.aiml</learn>
+        </template>
+    </category>
+</aiml>

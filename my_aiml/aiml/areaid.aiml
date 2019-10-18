@@ -1,0 +1,16 @@
+<aiml version = "1.0.1" encoding = "UTF-8">
+    <topic name="AREA">
+    <category>
+        <pattern>*</pattern>
+        <that>勤務地の希望はありますか</that>
+        <template>
+            <think>
+                <set name="areaid"><star index="1"/></set>
+                <system>python data_write.py areaid <star index="1"/></system>
+                <set name="topic">ANNUALSALARY</set>
+            </think>
+            年収の希望はありますか   
+        </template>
+    </category>
+    </topic>
+</aiml>

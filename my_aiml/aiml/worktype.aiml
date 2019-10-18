@@ -1,0 +1,16 @@
+<aiml version = "1.0.1" encoding = "UTF-8">
+   <topic name="WORKTYPE">
+   <category>
+      <pattern>*</pattern>
+      <that>選んでください「実力主義・権限委譲」「こだわらない」「コツコツ着実に業務を遂行」</that>
+      <template>
+         <think>
+            <set name="worktype"><star index="1"/></set>
+            <system>python data_write.py worktype <star index="1"/></system>
+            <set name="topic">TOPICSID</set>
+         </think>
+         その他何か希望があれば言ってください
+      </template>
+   </category>
+   </topic>
+</aiml>

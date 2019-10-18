@@ -1,0 +1,47 @@
+<aiml version = "1.0.1" encoding = "UTF-8">
+    <topic name="SEARCH">
+    <category>
+        <pattern>検索</pattern>
+        <template>
+            詳細を見たい企業名を入力するか、「条件を変更」「詳細条件を入力」と言ってください
+        </template>
+    </category>
+    <category>
+        <pattern>条件 を 変更</pattern>
+        <that>
+            詳細を見たい企業名を入力するか、「条件を変更」「詳細条件を入力」と言ってください
+        </that>
+        <template>
+            職種の希望はありますか
+            <think>
+                <set name="occupation"></set>
+                <set name="areaid"></set>
+                <set name="annualsalary"></set>
+                <set name="topic">OCCUPATION</set>
+            </think>
+        </template>
+    </category>
+    <category>
+        <pattern>詳細 条件 を 入力</pattern>
+        <that>
+            詳細を見たい企業名を入力するか、「条件を変更」「詳細条件を入力」と言ってください
+        </that>
+        <template>
+            業種の希望はありますか
+            <think><set name="topic">INDUSTRY</set></think>
+        </template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <that>
+            詳細を見たい企業名を入力するか、「条件を変更」「詳細条件を入力」と言ってください
+        </that>
+        <template>
+            <think>
+                <set name="company"><star index="1"/></set>
+                <system>python data_search.py <star index="1"/></system>
+            </think>
+        </template>
+    </category>
+    </topic>
+</aiml>

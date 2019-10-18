@@ -1,0 +1,17 @@
+<aiml version = "1.0.1" encoding = "UTF-8">
+    <topic name="ANNUALSALARY">
+    <category>
+        <pattern>* 万</pattern>
+        <that>年収の希望はありますか</that>
+        <template>
+            <think>
+                <set name="annualsalary"><star index="1"/></set>
+                <system>python data_write.py annualsalary <star index="1"/></system>
+                <set name="topic">SEARCH</set>
+            </think>
+            こちらでよろしいですか？よろしければ「検索」と言ってください
+            職種：<get name="occupation"/>、勤務地：<get name="areaid"/>、年収：<get name="annualsalary"/>
+        </template>
+    </category>
+    </topic>
+</aiml>

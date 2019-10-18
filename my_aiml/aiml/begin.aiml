@@ -1,0 +1,11 @@
+<aiml version = "1.0.1" encoding = "UTF-8">
+   <category>
+      <pattern>よろしく お願い し ます</pattern>
+      <template>
+         <condition name="occupation" value="">
+            職種の希望はありますか
+            <think><set name="topic">OCCUPATION</set></think>
+         </condition>
+      </template>
+   </category>
+</aiml>
